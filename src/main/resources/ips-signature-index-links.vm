@@ -1,0 +1,7 @@
+<html>
+ <body>
+#foreach ($document in $documents)
+  	<a href="${document.metaData.wemUrl}">$document.documentId</a>
+#end
+ </body>
+</html>

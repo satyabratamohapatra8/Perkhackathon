@@ -1,0 +1,64 @@
+<link rel="stylesheet" type="text/css" href="/cisco/web/support/JP/css/page.css" />
+<link rel="stylesheet" type="text/css" href="/cisco/web/support/JP/css/table.css" />
+<script type="text/javascript" language="javascript" src="/cisco/web/support/JP/js/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="/cisco/web/support/JP/js/jquery.dataTables.js"></script>
+<script src="/cisco/web/support/JP/js/ipstablepagination.js" ></script>
+
+
+<div class="ptl-full">
+	<h2 class="title-page" style="color: rgb(47, 102, 129); margin-left: 6px; font-size:100%;">${JP_STR_INDEX_INTRO_TEXT_1}</h2>
+   	
+   	<div class="info-text" style="color: rgb(0, 0, 0); clear: both; margin: 12px 0px; font-size: 12px;">
+		${JP_STR_INDEX_INTRO_TEXT_2}
+		${JP_STR_INDEX_INTRO_TEXT_3}
+	</div>
+	<div class="info-text" style="color: rgb(0, 0, 0); clear: both; margin: 12px 0px; font-size: 12px;"> 
+		${JP_STR_INDEX_INTRO_TEXT_4}
+		${JP_STR_INDEX_INTRO_TEXT_5}
+	</div>
+    <div class="info-text" style="clear: both; margin: 12px 0px; font-size: 12px;">
+    	<a href="http://tools.cisco.com/security/center/home.x">${JP_STR_CISCO_SECURITY_CENTER}</a>
+    </div>
+	<div class="info-text" style="clear: both; margin: 12px 0px; color: rgb(204, 0, 0); font-size: 12px;"> 
+		${JP_STR_INDEX_INTRO_TEXT_6}
+    </div>
+	
+	<div id="view-all">
+     <!--IPS SIGNATURE DATA STARTS-->
+	    <table id="ipsDataTable" cellpadding="0" cellspacing="0" border="1" bordercolor="#C0C0C0" >
+			<thead>
+			<tr id="headerRow">
+				<th>${JP_IPS_INDEX_TABLE_COLUMN1_HEADER}</th>
+				<th>${JP_IPS_INDEX_TABLE_COLUMN2_HEADER}</th>
+				<th>${JP_IPS_INDEX_TABLE_COLUMN3_HEADER}</th>
+				<th>${JP_IPS_INDEX_TABLE_COLUMN4_HEADER}</th>
+				<th>${JP_IPS_INDEX_TABLE_COLUMN5_HEADER}</th>
+			</tr>
+			</thead>
+			<tbody>			
+			#foreach($key in $documents.keySet() )
+			<tr>
+				<td class="sigId">$documents.get($key).ipsSignatureId/$documents.get($key).ipsSignatureSubId</td>
+				<td><a href="$documents.get($key).wemUrl">$documents.get($key).ipsSignatureName</a></td>
+				<td>$documents.get($key).ipsSignatureReleaseDateJapanese</td>
+				<td>$documents.get($key).ipsSignatureAlarmSeverity</td>
+				<td>$documents.get($key).ipsSignatureReleaseVersion</td>
+			</tr>
+			#end
+
+			</tbody>
+		</table>
+		<!--IPS SIGNATURE DATA ENDS-->
+		<br/>
+	<div style="margin-top: 8px">
+	 <p>
+    	<b>Please Note:</b> The information on this page is provided on an "as is"
+    	basis and does not imply any kind of guarantee or warranty. Your use of the information
+    	or materials linked from this page is at your own risk. Cisco reserves the right to
+    	change or update this page without notice.
+	</p>
+  </div>
+ 
+  </div>
+  
+</div>

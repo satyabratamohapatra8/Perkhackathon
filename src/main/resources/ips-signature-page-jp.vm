@@ -1,0 +1,422 @@
+<style TYPE="text/css">
+    h1{
+      margin-top: 13px;
+      margin-right: 0pt;
+      margin-bottom: -10px;
+      margin-left: 0pt;
+      font-size: 87%;
+      color: #8e9091;
+      font-family: Arial,Helvetica,Sans-serif;
+    }
+
+    h2{
+      margin-top: 0pt;
+      margin-right: 0pt;
+      margin-bottom: 0pt;
+      margin-left: 0pt;
+      padding-top: 13px;
+      padding-right: 0pt;
+      padding-bottom: 7px;
+      padding-left: 0px;
+      font-size: 115%;
+      line-height: 0.92em;
+      color: #424e53;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: #cccccc;
+      font-family: Arial,Helvetica,Sans-serif;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    td.leftborder {
+        border-left: 1px solid #CCCCCC;
+    }
+    td.bottomborder {
+        border-bottom: 1px solid #CCCCCC;
+    }
+    td.leftandbottomborder {
+        border-left: 1px solid #CCCCCC;
+        border-bottom: 1px solid #CCCCCC;
+    }
+    .headline {
+      font-size:12.5pt;
+      font-family:Arial;
+      font-weight: bold;
+    }
+    .subheadline {
+      font-size:9.0pt;
+      font-family:Arial;
+      font-weight: bold;
+      font-style: italic;
+    }
+    .label1 {
+      font-size:8.5pt;
+      font-family:Arial;
+    }
+    .label2 {
+      font-size:8.5pt;
+      font-family:Arial;
+      font-weight: bold;
+      color: #336666;
+    }
+    .data1 {
+      font-size:8.5pt;
+      font-family:Arial;
+      font-weight: bold;
+    }
+    .data2 {
+      font-size:8.5pt;
+      font-family:Arial;
+    }
+    .data_ucs {
+      font-size:8.0pt;
+      font-family:Arial;
+      font-weight: bold;
+    }
+    .smallprint {
+      font-size:7.5pt;
+      font-family:Arial;
+    }
+    .customtop {
+      font-size:8.5pt;
+      font-family:Arial;
+    }
+    .templatelabel {
+      font-size:9pt;
+      font-family:Arial;
+      font-weight:bold;color:#336666;
+      font-style:italic;
+      text-transform: uppercase;
+    }
+    .rightborder {
+        border-right-width: 1px;
+      border-right-style: solid;
+      border-right-color: #cccccc;
+    }
+    .sitecopy table.table-formatted-alt#introtable th,
+    .sitecopy table.table-formatted-alt#introtable td,
+    .sitecopy table.table-formatted-alt#ipstable th,
+    .sitecopy table.table-formatted-alt#ipstable td,
+    .sitecopy table.table-formatted-alt#primaryprodtable th,
+    .sitecopy table.table-formatted-alt#primaryprodtable td,
+    .sitecopy table.table-formatted-alt#assocprodtable th,
+    .sitecopy table.table-formatted-alt#assocprodtable td {
+      border: 1px solid #CCCCCC;
+      color: black;
+    }
+    .sitecopy table.table-formatted-alt#introtable th,
+    .sitecopy table.table-formatted-alt#ipstable th,
+    .sitecopy table.table-formatted-alt#primaryprodtable th,
+    .sitecopy table.table-formatted-alt#assocprodtable th
+    {
+      background-color: #cccccc;
+      border-bottom-color: #CCCCCC;
+      font-size: 11px;
+      color: black;
+    }
+</style>
+
+<div id="libra">
+ <table align="center" cellpadding="0" cellspacing="0" border="0" width="99%">
+  <tr>
+   <td width="1">&nbsp;</td>
+   <td>   
+    <table align="center" cellpadding="0" cellspacing="1" border="0" width="99%">
+     <tr>
+      <td>
+       <table width="100%" border="0">
+        <tr>
+         <td class="headline" colspan="2"><span class="headline">${sigName}</span></td> 
+        </tr>
+        <tr>
+         <td colspan="2">&nbsp;</td> 
+        </tr>
+        <tr>
+         <td>
+          <a href="/cisco/web/support/JP/MtDisclaimer.html" onclick="global_openCdcPopup('/cisco/web/support/JP/MtDisclaimer.html',643,468);return false;">${JP_STR_MT_DISCLAIMER}</a>&nbsp;|&nbsp;<img id="feedback_img" style="cursor: pointer;margin:right:2pt" title="Feedback" src="/web/fw/i/sm_0000EE_oo1.gif" border="0" />          
+          <a href="javascript: void(0)" onclick="window.open('https://secure.opinionlab.com/ccc01/o.asp?id=nTPnrYJn&amp;referer='+document.URL+'&amp;resize=false', 'feedback', 'width=550, height=460, scrollbars=1, menubar=1, resizable=1'); return false;">&#12501;&#12451;&#12540;&#12489;&#12496;&#12483;&#12463;</a>
+         </td>
+        </tr>
+        <tr>
+         <td colspan="2">&nbsp;</td> 
+        </tr>
+        <tr>
+         <td valign="top">
+          <h3 class="templatelabel" style="font-style:italic;font-size:90%;margin-left:0px">${JP_STR_IPS_SIGNATURE}</h3>
+          <tr>
+           <td valign="top" colspan="2" width="15%">
+            <hr width="100%" size="1" color="#cccccc">
+           </td>
+          </tr>
+         </table>
+        </td>
+       </tr>
+       <tr>
+        <td class="bottomborder" width="50%">
+         <table cellpadding="0" cellspacing="0" width="100%" border="0">
+          <tr valign="top">
+           <td width="50%">
+	        <table width="100%" border="0">
+		     <tr>
+			  <td valign="top" width="130">
+			   <span class="label1">${JP_STR_SIGNATURE_ID}：</span>
+			  </td>
+			  <td valign="top" width="*">
+			   <span class="data1">${sig.getID()}/${sig.getSubID()}</span>
+			  </td> 
+		     </tr>
+		     <tr>
+			  <td valign="top">
+			   <span class="label1">${JP_STR_ORIGINAL_RELEASE}：</span>
+			  </td>
+			  <td valign="top">
+			   <span class="data1">
+			    ${sig.firstReleaseVersion}
+			   </span>
+			  </td> 
+ 		     </tr>
+		     <tr>
+			  <td valign="top">
+			   <span class="label1">${JP_STR_RELEASE}：</span>
+			  </td>
+			  <td valign="top">
+			   <span class="data1">
+			    ${sig.releaseVersion}
+			   </span>
+			   <span class="label1">（<a href="${JP_STR_DOWNLOAD_LINK}" title="新しいウィンドウ（英語）を開きます" target="_blank">${JP_STR_DOWNLOAD}</a>）</span>
+			  </td> 
+ 		     </tr>
+		     <tr>
+			  <td valign="top">
+			   <span class="label1">${JP_STR_ORIGINAL_RELEASE_DATE}：</span>
+			  </td>
+			  <td valign="top">
+			   <span class="data1">
+			   $date.format('yyyy年MM月dd日', $sigFirstReleaseDate, $locale, $tz)
+			   </span>
+		      </td> 
+		     </tr>
+		     <tr>
+			  <td style="white-space:nowrap;" valign="top">
+			   <span class="label1">${JP_STR_LATEST_RELEASE_DATE}：</span>
+			  </td>
+			  <td style="white-space:nowrap;" valign="top">
+			   <span class="data1">
+			   $date.format('yyyy年MM月dd日', $sigReleaseDate, $locale, $tz)
+			   </span>
+			  </td> 
+		     </tr>
+		     <tr>
+			  <td valign="top">
+			   <span class="label1">${JP_STR_DEFAULT_ENABLED}：</span>
+			  </td>
+			  <td valign="top">
+				<span class="data1">${sig.defaultEnabled}</span>
+			  </td> 
+			 </tr>
+			 <tr>
+			  <td valign="top">
+				<span class="label1">${JP_STR_DEFAULT_RETIRED}：</span>
+			  </td>
+			  <td valign="top">
+				<span class="data1">${sig.defaultRetired}</span>
+			  </td> 
+			 </tr>
+#if (${sig.cves})
+		<tr>
+			<td valign="top">
+				<span class="label1">CVE：</span>
+			</td>
+			<td valign="top">
+				<span class="data1">
+									${cves}
+				</span>
+			</td>
+		</tr>	
+#end
+
+#if (${sig.bugtraqs})
+		<tr>
+			<td valign="top">
+				<span class="label1">BugTraq ID：</span>
+			</td>
+			<td valign="top">
+				<span class="data1">${bugtraqs}</span>
+			</td>
+		</tr>	
+#end
+			</table>
+		   </td>
+		   <td class="leftborder" algin="center" valign="top" width="1">&nbsp;</td>
+		   <td width="49%" valign="top">
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+			 <tr>
+			  <td width="5%"></td>
+			  <td align="left" valign="top" width="34%">
+				<span class="label1">${JP_STR_ALARM_SEVERITY}：</span>
+			  </td>
+			  <td width="51%">
+				<span class="data_ucs" style="float: left">${sig.alarmSeverity}</span>
+				
+				<img style="float: right" src="http://tools.cisco.com/security/center/img/${sig.alarmSeverity}.gif" />
+				<span>&nbsp;</span>
+		  	  </td>
+			  <td width="10%"></td>
+			 </tr>
+		     <tr>
+			  <td width="5%"></td>
+			  <td align="left" width="34%">
+				<span class="label1">${JP_STR_FIDELITY}：</span>
+			  </td>
+			  <td width="28%">
+				<span class="data1">${sig.fidelity}</span>
+			  </td>
+			  <td width="33%">&nbsp;</td>
+		     </tr>
+	        </table>
+           </td>
+          </tr>
+         </table>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <table width="100%" cellpadding="2" cellspacing="0" border="0">
+          <tr>
+           <td height="2" colspan="2">&nbsp;</td> 
+          </tr>
+          <tr>
+           <td class="bottomborder" valign="top" width="100%">
+            <table width="100%" cellpadding="2" cellspacing="0" border="0">
+             <tr>
+              <td width="98%"><span class="label2">${JP_STR_DESCRIPTION}</span></td> 
+             </tr>
+             <tr>
+              <td width="100%" align="left"></td>
+             </tr>
+             <tr>
+              <td width="100%"><span class="data2">${sigDescription}</span></td> 
+             </tr>
+             <tr height="10">
+              <td width="100%" align="left">
+               <hr width="100%" size="1" color="#cccccc">
+              </td>
+             </tr>
+             <tr>
+              <td width="98%"><span class="label2">${JP_STR_RECOMMENDED_FILTER}</span></td> 
+             </tr>
+             <tr>
+              <td width="100%" align="left"></td>
+             </tr>
+             <tr>
+              <td width="100%"><span class="data2">${sigRecommendedFilters}</span></td>
+             </tr>
+             <tr height="10">
+              <td width="100%" align="left">
+               <hr width="100%" size="1" color="#cccccc">
+              </td>
+             </tr>
+             <tr>
+			  <td width="98%"><span class="label2">${JP_STR_BENIGN_TRIGGERS}</span></td> 
+			 </tr>
+			 <tr>
+			  <td width="100%" align="left"></td>
+			 </tr>
+			 <tr>
+			  <td width="100%">
+			   <span class="data2">${sigBenignTriggers}</span>
+			  </td> 
+			 </tr>
+			 <tr height="10">
+			  <td width="100%" align="left"></td>
+			 </tr>
+			</table>
+		   </td>
+		  </tr>
+		 </table>
+
+#if (${alerts})
+		 <table width="100%" cellpadding="2" cellspacing="0" border="0">
+		  <tr>
+		   <td><span class="label2">${JP_STR_INTELLISHIELD_ALERTS}</span></td>
+		  </tr>
+		  <tr>
+		   <td align="left">&nbsp;</td>
+	      </tr>
+			<tr>
+				<td>
+					<div class="sitecopy">
+						<table id="ipstable" class="table-formatted-alt" width="100%" cellpadding="2" cellspacing="0" border="0">
+							<tr>
+								<th align="left"><span class="data2" style="white-space: nowrap"><strong>IntelliShield ID </strong></span></th>
+								<th align="left"><span class="data2" style="white-space: nowrap"><strong>${JP_STR_HEADLINE}</strong></span></th>
+								<th align="left"><span class="data2" style="white-space: nowrap"><strong>${JP_STR_VERSION}</strong></span></th>
+								<th align="left"><span class="data2" style="white-space: nowrap"><strong>${JP_STR_CVSS_SCORE}</strong></span></th>
+								<th align="left"><span class="data2" style="white-space: nowrap"><strong>${JP_STR_LAST_PUBLISHED}</strong></span></th>
+							</tr>
+#foreach ($alert in ${alerts})
+												<tr>
+													<td><span class="data1">${alert.id}</span></td>
+													<td align="left"><a title="新しいウィンドウ（英語）を開きます" href="http://tools.cisco.com/security/center/viewAlert.x?alertId=${alert.id}" target="_blank">${alert.headline}</a></td>
+													<td><span class="data2">${alert.version}</span></td>
+													<td>
+#if ($alert.cvssScore.temporal && $alert.cvssScore.temporal.length() > 0)
+														<a title="新しいウィンドウ（英語）を開きます" href="https://intellishield.cisco.com/security/alertmanager/cvssCalculator.do?dispatch=1&vector=${alert.cvssScore.vector}&version=${alert.cvssScore.version}" target="new">${alert.cvssScore.base}/${alert.cvssScore.temporal}</a>
+#end
+														&nbsp;
+													</td>
+													<td><span class="data2" style="white-space: nowrap">$date.format('yyyy年MM月dd日 hh:mm a z', ${alertDates.get($alert)}, $locale, $tz)</span></td>
+												</tr>
+#end								
+						</table>
+					</div>
+				</td>
+			</tr>
+         </table>
+#end
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <td width="100%" align="left">&nbsp;</td> 
+      </tr>
+      <tr>
+       <td width="98%"><span class="label2">${JP_STR_DOWNLOAD}</span></td> 
+      </tr>
+      <tr>
+       <td width="100%" align="left">&nbsp;</td> 
+      </tr>
+      <tr>
+       <td width="100%"><span class="data2">${JP_STR_DOWNLOAD_BLURB}</span></td> 
+      </tr>
+      <tr>
+       <td width="100%" align="left">&nbsp;</td> 
+      </tr>
+      <tr>
+       <td width="100%"><span class="data2"><a title="新しいウィンドウ（英語）を開きます" href="http://tools.cisco.com/security/center/viewIpsSignature.x?signatureId=${sig.ID}&signatureSubId=${sig.subID}&softwareVersion=${sig.softwareVersion}&releaseVersion=${sig.releaseVersion}" target="_blank">${JP_STR_ENGLISH_VERSION}</a></span></td> 
+      </tr>
+      <tr>
+       <td width="100%" align="left">&nbsp;</td> 
+      </tr>
+      <tr height="10">
+       <td>
+		<table align="center" CELLPADDING="0" CELLSPACING="0" BORDER="0" width="100%">
+		 <tr>
+		  <td>
+		   <hr width="100%" size="1" color="#cccccc">
+		  </td>
+		 </tr>
+		 <tr>
+		  <td>
+			<span class="smallprint"><b>LEGAL DISCLAIMER</b>
+			<br>THE  INFORMATION ON THIS PAGE IS PROVIDED ON AN "AS IS" BASIS AND DOES NOT IMPLY ANY KIND OF GUARANTEE OR WARRANTY, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR USE. YOUR USE OF THE INFORMATION CONTAINED HEREIN, OR MATERIALS LINKED FROM THE DOCUMENT, IS AT YOUR OWN RISK. INFORMATION IN THIS DOCUMENT AND ANY RELATED COMMUNICATIONS IS BASED ON OUR KNOWLEDGE AT THE TIME OF PUBLICATION AND IS SUBJECT TO CHANGE WITHOUT NOTICE. CISCO RESERVES THE RIGHT TO CHANGE OR UPDATE THIS DOCUMENT AT ANY TIME.</span>
+		  </td>
+		 </tr>
+	    </table>	
+	   </td>
+ 	  </tr>
+     </table>
+    </td>
+   </tr>
+  </table>
+</div>
